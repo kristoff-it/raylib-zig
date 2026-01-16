@@ -75,7 +75,10 @@ pub fn build(b: *std.Build) !void {
 
     const raylib_artifact = this.getRaylib(b, target, optimize, Options.getOptions(b));
     const raylib = this.getModule(b, target, optimize);
+    raylib.link_libc = true;
+    
     const raygui = this.gui.getModule(b, target, optimize);
+    raygui.link_libc = true;
 
     raylib.linkLibrary(raylib_artifact);
 
@@ -405,13 +408,11 @@ pub fn build(b: *std.Build) !void {
     const raylib_test = b.addTest(.{
         .root_module = raylib,
     });
-    raylib_test.linkLibC();
 
     const raygui_test = b.addTest(.{
         .root_module = raygui,
     });
     raygui_test.root_module.addImport("raylib-zig", raylib);
-    raygui_test.linkLibC();
 
     const test_step = b.step("test", "Check for library compilation errors");
     test_step.dependOn(&raylib_test.step);

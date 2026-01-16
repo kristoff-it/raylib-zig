@@ -3,10 +3,6 @@
     .version = "5.6.0-dev",
     .fingerprint = 0xc4cfa8c610114f28,
     .dependencies = .{
-        .raylib = .{
-            .url = "git+https://github.com/raysan5/raylib#8ada37d9671682f420a2be1f1afd4b06173b81ad",
-            .hash = "raylib-5.6.0-dev-whq8uCg2ywTzCiX3VEP9RuCMXR6_VnDBmkj8GjL_p5QN",
-        },
         .raygui = .{
             .url = "git+https://github.com/raysan5/raygui#9cdfec460b43a17264af3c181c46f62bf107ac17",
             .hash = "N-V-__8AALUbbwDKkSH4nbf3Ml_dTWo9qbELvle5i9eQZMuo",
@@ -18,6 +14,10 @@
         .zemscripten = .{
             .url = "git+https://github.com/zig-gamedev/zemscripten?ref=main#00da03b188220374a57cb34cda6230b8d53737ea",
             .hash = "zemscripten-0.2.0-dev-sRlDqFJSAAB8hgnRt5DDMKP3zLlDtMnUDwYRJVCa5lGY",
+        },
+        .raylib = .{
+            .url = "git+https://github.com/kristoff-it/raylib?ref=zig-0.16#68eff3f612091d9e713d2229b4f840582dbfc28f",
+            .hash = "raylib-5.6.0-dev-whq8uLAJDQXCUoWbI50KR2RX8f1NhyzmklCim1bT2EH2",
         },
     },
     .minimum_zig_version = "0.15.1",
